@@ -11,6 +11,9 @@
 
 <div class="container">
 
+    <!-- Coin counter -->
+    <div id="coin-counter">Coins: <span id="coins">0</span></div>
+    
     <!-- Title -->
     <h1 class="title">{{ page.title }}</h1>
 
@@ -28,14 +31,14 @@
 
     <!-- Clues -->
     {% if page.clues %}
-    <ul class="clue-list">
+    <div id="clues">
         {% for clue in page.clues %}
-        <li>{{ clue }}</li>
+         <div class="clue hidden">{{ clue }}</div>
         {% endfor %}
-    </ul>
+    </div>
     {% endif %}
 
-    <!-- Grey square -->
+    <!-- QRCode camera system -->
     <div class="image-block">
         <img src="https://placehold.co/400x400" alt="Sample Image">
     </div>
