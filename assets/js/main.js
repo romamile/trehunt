@@ -38,6 +38,7 @@ if (nextToReveal >= clues.length) {
 // ========== CLICK LOGIC ============
 // ===================================
 revealBtn.addEventListener("click", () => {
+    print(nextToReveal)
     if (nextToReveal >= clues.length) return;
 
     const clueCost = COSTS[nextToReveal];
