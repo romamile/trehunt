@@ -2,7 +2,7 @@
 layout: default
 permalink: /test/
 title: "Helena - PhD student, sharing the room of the researcher"
-picture: "trehunt/assets/img/st1_1.jpg"
+picture: "trehunt/assets/img/str1_1.jpg"
 clues:
   - "Get the arrow"
   - "There is a bow and an arrow"
