@@ -4,7 +4,7 @@ const COSTS = [0, 2, 4, 6];
 // ==== DOM elements ====
 const coinsDisplay = document.getElementById("coins");
 const clues = Array.from(document.querySelectorAll("#clues .clue"));
-const revealBtn = document.getElementById("reveal-btn");
+const revealBtn = document.getElementById("reveal-button");
 
 // ==== Load saved state or initialize ====
 let data = JSON.parse(localStorage.getItem("trehunt")) || {
