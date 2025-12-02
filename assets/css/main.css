@@ -1,0 +1,49 @@
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+    font-family: sans-serif;
+}
+
+/* Title */
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Image */
+.image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* Text */
+.content {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+/* Clue list */
+.clue-list {
+    padding-left: 20px;
+    font-size: 1rem;
+    margin-bottom: 22px;
+}
+
+.clue-list li {
+    margin-bottom: 6px;
+}
+
+/* Grey square */
+.grey-square {
+    width: 100%;
+    height: 120px;
+    background: #d9d9d9;
+    border-radius: 8px;
+}
