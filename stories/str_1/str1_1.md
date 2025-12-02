@@ -1,6 +1,9 @@
 ---
 layout: default
-permalink: /test/
+hash: bb08678bdd
+permalink: /bb08678bdd/
+id_story: 1
+id_step: 1
 title: "Helena - PhD student, sharing the room of the researcher"
 picture: "trehunt/assets/img/str1_1.jpg"
 clues:
