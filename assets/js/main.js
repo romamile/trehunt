@@ -12,6 +12,8 @@ let data = JSON.parse(localStorage.getItem("trehunt")) || {
     revealed: 1 // Start with first clue visible
 };
 
+print(data)
+
 let coins = data.coins;
 let nextToReveal = data.revealed;
 
