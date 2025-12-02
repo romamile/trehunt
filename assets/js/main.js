@@ -12,8 +12,6 @@ let data = JSON.parse(localStorage.getItem("trehunt")) || {
     revealed: 1 // Start with first clue visible
 };
 
-print(data)
-
 let coins = data.coins;
 let nextToReveal = data.revealed;
 
@@ -40,7 +38,6 @@ if (nextToReveal >= clues.length) {
 // ========== CLICK LOGIC ============
 // ===================================
 revealBtn.addEventListener("click", () => {
-    print(nextToReveal)
     if (nextToReveal >= clues.length) return;
 
     const clueCost = COSTS[nextToReveal];
