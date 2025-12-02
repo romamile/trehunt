@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/mobilepage.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Title -->
+    <h1 class="title">{{ page.title }}</h1>
+
+    <!-- Picture -->
+    {% if page.picture %}
+    <div class="image-block">
+        <img src="{{ page.picture }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <!-- Markdown content -->
+    <div class="content">
+        {{ content }}
+    </div>
+
+    <!-- Clues -->
+    {% if page.clues %}
+    <ul class="clue-list">
+        {% for clue in page.clues %}
+        <li>{{ clue }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <!-- Grey square -->
+    <div class="image-block">
+        <img src="https://placehold.co/400x400" alt="Sample Image">
+    </div>
+</div>
+
+</body>
+</html>
