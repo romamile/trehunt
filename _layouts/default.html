@@ -39,10 +39,35 @@
 
     <button id="reveal-button" class="reveal-btn">Reveal next clue, for a price!</button>
 
-    <!-- QRCode camera system -->
+    <!-- QRCode camera system
     <div class="image-block">
         <img src="https://placehold.co/400x400" alt="Sample Image">
     </div>
+    -->
+    
+    <p>Scan the correct QR code to reveal the next page.</p>
+
+    <!-- Where html5-qrcode renders the camera -->
+    <div id="reader"></div>
+    
+    <!-- Error overlay -->
+    <div id="error-overlay" class="overlay">
+      <div class="error-message">
+        This is not the correct QR code.<br>
+        Try a different one.
+      </div>
+    </div>
+    
+    <!-- Success overlay -->
+    <div id="success-overlay" class="overlay">
+      <div class="success-message">
+        <button id="close-success" class="close-btn">✕</button>
+        Correct code!<br><br>
+        <a id="next-link" href="#">Go to the next page →</a>
+      </div>
+    </div>
+
+    
 </div>
     
 <script src="/trehunt/assets/js/main.js"></script>
