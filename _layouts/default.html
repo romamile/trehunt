@@ -54,7 +54,15 @@
 
     
 </div>
-    
+
+<script>
+    // Pass Jekyll/Liquid variables to JavaScript
+    const PAGE_DATA = {
+        id_story: {{ page.id_story }},
+        id_step: {{ page.id_step }},
+        hash: "{{ page.hash }}"
+    };
+</script>
 <script src="/trehunt/assets/js/html5-qrcode.min.js"></script>
 <script src="/trehunt/assets/js/main.js"></script>
 <script src="/trehunt/assets/js/QR-code.js"></script>
