@@ -1,109 +1,65 @@
-// =====================
-// CONFIGURATION
-// =====================
+const cameraWrapper = document.getElementById("camera-wrapper");
+const cameraDiv = document.getElementById("my-camera");
+const activateDiv = document.getElementById("activate");
+const resultDiv = document.getElementById("result");
 
-// The exact content of the correct QR code
-const correctCode = "http://fr.wikipedia.org/";
+const html5Qr = new Html5Qrcode("my-camera");
 
-// The URL of the next page / clue
-const nextPageUrl = "next_page.html";
+activateDiv.onclick = async () => {
+  activateDiv.classList.add("hidden");
+  cameraWrapper.classList.remove("hidden");
 
+  const cameras = await Html5Qrcode.getCameras();
+  const camId = cameras[0].id;
 
-// =====================
-// DOM ELEMENT REFERENCES
-// =====================
+  html5Qr.start(
+    camId,
+    {
+      fps: 10,
+      qrbox: (w, h) => ({ width: w * 0.8, height: w * 0.8 }),
+    },
+    (decodedText) => {
+      html5Qr.stop().then(() => {
 
-const errorOverlay    = document.getElementById("error-overlay");
-const successOverlay  = document.getElementById("success-overlay");
-const nextLink        = document.getElementById("next-link");
-const closeSuccessBtn = document.getElementById("close-success");
-const readerElement   = document.getElementById("reader");
+         //console.log(decodedText)
+         if( isQRcodeGood(decodedText) ){
+            cameraWrapper.classList.add("hidden");
+            resultDiv.classList.remove("hidden");
+            resultDiv.textContent = "You found me!\nClick on me to go to the next page";
 
-let errorTimeoutId = null;
-let html5QrcodeScanner = null;  // will be assigned if reader exists
-
-
-// =====================
-// OVERLAY HELPERS
-// =====================
-
-function showErrorOverlay() {
-  // Reset any existing hide timer
-  if (errorTimeoutId !== null) {
-    clearTimeout(errorTimeoutId);
-  }
-
-  errorOverlay.style.display = "flex";
-
-  // Hide after 3 seconds
-  errorTimeoutId = setTimeout(() => {
-    errorOverlay.style.display = "none";
-    errorTimeoutId = null;
-  }, 3000);
-}
-
-function hideErrorOverlay() {
-  if (errorTimeoutId !== null) {
-    clearTimeout(errorTimeoutId);
-    errorTimeoutId = null;
-  }
-  errorOverlay.style.display = "none";
-}
-
-function showSuccessOverlay() {
-  // Configure the link to the next page
-  nextLink.href = nextPageUrl;
-  successOverlay.style.display = "flex";
-}
-
-function hideSuccessOverlay() {
-  successOverlay.style.display = "none";
-}
+         } else {
+            activateDiv.classList.remove("hidden");
+            cameraWrapper.classList.add("hidden");
+            activateDiv.textContent = "Not the correct QR code!\nClick on me to scan again";
+         }
 
 
-// =====================
-// QR SCANNER CALLBACKS
-// =====================
-
-function onScanSuccess(decodedText, decodedResult) {
-  // Wrong QR code
-  if (decodedText !== correctCode) {
-    showErrorOverlay();
-    return;
-  }
-
-  // Correct QR code
-  hideErrorOverlay();
-  showSuccessOverlay();
-}
-
-function onScanError(errorMessage) {
-  // Ignored; these are often just "no QR in this frame"
-  // console.warn("Scan error:", errorMessage);
-}
-
-
-// =====================
-// EVENT LISTENERS
-// =====================
-
-if (closeSuccessBtn) {
-  closeSuccessBtn.addEventListener("click", () => {
-    hideSuccessOverlay();
-  });
-}
-
-
-// =====================
-// INITIALIZE SCANNER
-// =====================
-
-if (readerElement) {
-  html5QrcodeScanner = new Html5QrcodeScanner(
-    "reader",
-    { fps: 10, qrbox: { width: 250, height: 250 } },
-    false
+      });
+    },
+    (err) => {}
   );
+};
 
-  html5QrcodeScanner.render(onScanSuccess, onScanError);
+isQRcodeGood = (_str) => {
+   return true;
 }
+
+generateShortHash = (input, length = 10) => {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(input);
+
+  // SHA-256 digest
+  const hashBuffer = crypto.subtle.digest("SHA-256", data);
+
+  // Convert to hex
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+
+  return hashHex.slice(0, length);
+}
+
+async function doItAll(input) {
+  const h = generateShortHash(input, 10);
+  console.log(input + " - " + h);
+}
+
