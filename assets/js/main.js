@@ -30,8 +30,11 @@ updateButtonLabel();
 
 // Disable if all clues already visible
 if (nextToReveal >= clues.length) {
-    revealBtn.disabled = true;
-    revealBtn.textContent = "All clues revealed";
+   revealBtn.disabled = true;
+   revealBtn.background = "#b4b2ae";   // any CSS color
+
+
+   revealBtn.textContent = "All clues revealed";
 }
 
 // ===================================
