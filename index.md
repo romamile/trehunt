@@ -1,3 +1,7 @@
+---
+title: MPI's treasure hunt
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
