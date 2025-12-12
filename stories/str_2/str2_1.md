@@ -1,10 +1,10 @@
 ---
 layout: default
-hash: bb08678bdd
-permalink: /bb08678bdd/
+hash: 420cf95170c6ba2
+permalink: /420cf95170c6ba2/
 id_story: 2
-id_step: 0
-title: "Helena 2 _ 0 - PhD student, sharing the room of the researcher"
+id_step: 1
+title: "Helena 2 _ 1 - PhD student, sharing the room of the researcher"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "Get the arrow"
