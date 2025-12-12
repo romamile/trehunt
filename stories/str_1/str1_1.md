@@ -2,9 +2,9 @@
 layout: default
 hash: bb08678bdd
 permalink: /bb08678bdd/
-id_story: 1
-id_step: 1
-title: "Helena - PhD student, sharing the room of the researcher"
+id_story: 2
+id_step: 0
+title: "Helena 2 _ 0 - PhD student, sharing the room of the researcher"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "Get the arrow"
