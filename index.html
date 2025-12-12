@@ -37,7 +37,7 @@ permalink: /
           <ul>
               {% for p in site.pages %}
                   {% if p.title and p.url != page.url %}
-                  <li><a href="trehunt/{{ p.url }}">{{ p.title }}</a></li>
+                  <li><a href="/{{ p.url }}">{{ p.title }}</a></li>
                   {% endif %}
               {% endfor %}
           </ul>
