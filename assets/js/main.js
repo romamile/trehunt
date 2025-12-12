@@ -2,16 +2,6 @@
 const INITIAL_COINS = 30;
 const COSTS = [0, 2, 4, 6];
 
-
-
-
-
-// !!!!!!!!!!!!!!!!!!!!!
-localStorage.clear();
-
-
-
-
 // Load or create at start
 if (!localStorage.getItem("gameState")) {
    initGameState(10);
