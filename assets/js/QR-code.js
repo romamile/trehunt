@@ -22,7 +22,8 @@ activateDiv.onclick = async () => {
   const camId = cameras[0].id;
 
   html5Qr.start(
-    camId,
+    //camId,
+    { facingMode: "environment" },
     {
       fps: 10,
       qrbox: (w, h) => ({ width: w * 0.8, height: w * 0.8 }),
