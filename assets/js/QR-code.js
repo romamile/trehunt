@@ -46,6 +46,20 @@ activateDiv.onclick = async () => {
                if(id_step==3) { // Finished a story, you get more coins!
                   data.coins += 10;
                   coinsDisplay.textContent = data.coins;
+
+                  const rect = document.getElementById("coins").getBoundingClientRect();
+
+                  const x = (rect.left - rect.width ) / window.innerWidth;
+                  const y = (rect.top + rect.height * 5) / window.innerHeight;
+
+                  confetti({
+                     particleCount: 80,
+                     spread: 30,
+                     startVelocity: 30,
+                     ticks: 90,
+                     origin: { x, y }
+                  });
+
                }
                
                saveGameState();
