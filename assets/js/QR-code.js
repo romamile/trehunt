@@ -41,6 +41,11 @@ activateDiv.onclick = async () => {
                resultDiv.classList.remove("hidden");
                resultDiv.textContent = "You found me!\nClick on me to go to the next page";
 
+               resultDiv.addEventListener("click", () => {
+                  window.location.href = "romamile.com/trehunt/"+resultHash;
+               }, { once: true } );
+                              
+
                data.listStory[id_story][id_step].completed = true;
 
                if(id_step==3) { // Finished a story, you get more coins!
