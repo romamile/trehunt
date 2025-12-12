@@ -32,7 +32,8 @@ activateDiv.onclick = async () => {
 
          // QR code should be the first 15 char of SHA-256 of id_story+_+id_step
          // Do the verification on a server when ... we'll use one
-         shortHash(id_story+"_"+id_step)
+         next_id_step = id_step + 1
+         shortHash(id_story+"_"+next_id_step)
          .then(resultHash => {
             console.log(decodedText)
             console.log(resultHash)
@@ -42,7 +43,7 @@ activateDiv.onclick = async () => {
                resultDiv.textContent = "You found me!\nClick on me to go to the next page";
 
                resultDiv.addEventListener("click", () => {
-                  window.location.href = "romamile.com/trehunt/"+resultHash;
+                  window.location.href = "https://romamile.com/trehunt/"+resultHash;
                }, { once: true } );
                               
 
