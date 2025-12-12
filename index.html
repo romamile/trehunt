@@ -36,8 +36,8 @@ permalink: /
       <nav class="menu">
           <ul>
               {% for p in site.pages %}
-                  {% if p.title and p.url != page.url && p.id_step == 0%}
-                  <li><a href="./{{ p.url }}">{{ p.title }}</a></li>
+                  {% if p.title and p.url != page.url && p.id_step == 0 %}
+                  <li><a href="./{{ p.url }}">{{ p.title }}</a></li> {{ p.id_step }}
                   {% endif %}
               {% endfor %}
           </ul>
