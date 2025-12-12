@@ -42,6 +42,12 @@ activateDiv.onclick = async () => {
                resultDiv.textContent = "You found me!\nClick on me to go to the next page";
 
                data.listStory[id_story][id_step].completed = true;
+
+               if(id_step==3) { // Finished a story, you get more coins!
+                  data.coins += 10;
+                  coinsDisplay.textContent = data.coins;
+               }
+               
                saveGameState();
             } else {
                activateDiv.classList.remove("hidden");
