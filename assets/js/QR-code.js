@@ -5,6 +5,15 @@ const resultDiv = document.getElementById("result");
 
 const html5Qr = new Html5Qrcode("my-camera");
 
+if( data.listStory[id_story][id_step].completed ) {
+   cameraWrapper.classList.add("hidden");
+   activateDiv.classList.add("hidden");
+
+   resultDiv.classList.remove("hidden");
+   resultDiv.textContent = "You found me already!\nClick on me to go to the next page";
+}
+
+
 activateDiv.onclick = async () => {
   activateDiv.classList.add("hidden");
   cameraWrapper.classList.remove("hidden");
@@ -21,18 +30,25 @@ activateDiv.onclick = async () => {
     (decodedText) => {
       html5Qr.stop().then(() => {
 
-         //console.log(decodedText)
-         if( isQRcodeGood(decodedText) ){
-            cameraWrapper.classList.add("hidden");
-            resultDiv.classList.remove("hidden");
-            resultDiv.textContent = "You found me!\nClick on me to go to the next page";
+         // QR code should be the first 15 char of SHA-256 of id_story+_+id_step
+         // Do the verification on a server when ... we'll use one
+         shortHash(id_story+"_"+id_step)
+         .then(resultHash => {
+            console.log(decodedText)
+            console.log(resultHash)
+            if(resultHash == decodedText) {
+               cameraWrapper.classList.add("hidden");
+               resultDiv.classList.remove("hidden");
+               resultDiv.textContent = "You found me!\nClick on me to go to the next page";
 
-         } else {
-            activateDiv.classList.remove("hidden");
-            cameraWrapper.classList.add("hidden");
-            activateDiv.textContent = "Not the correct QR code!\nClick on me to scan again";
-         }
-
+               data.listStory[id_story][id_step].completed = true;
+               saveGameState();
+            } else {
+               activateDiv.classList.remove("hidden");
+               cameraWrapper.classList.add("hidden");
+               activateDiv.textContent = "Not the correct QR code!\nClick on me to scan again";
+            }
+         });
 
       });
     },
@@ -40,26 +56,18 @@ activateDiv.onclick = async () => {
   );
 };
 
-isQRcodeGood = (_str) => {
-   return true;
-}
 
-generateShortHash = (input, length = 10) => {
+function sha256(str) {
   const encoder = new TextEncoder();
-  const data = encoder.encode(input);
+  const data = encoder.encode(str);
 
-  // SHA-256 digest
-  const hashBuffer = crypto.subtle.digest("SHA-256", data);
-
-  // Convert to hex
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
-
-  return hashHex.slice(0, length);
+  return crypto.subtle.digest("SHA-256", data).then(buffer => {
+    return [...new Uint8Array(buffer)]
+      .map(b => b.toString(16).padStart(2, "0"))
+      .join("");
+  });
 }
 
-async function doItAll(input) {
-  const h = generateShortHash(input, 10);
-  console.log(input + " - " + h);
+function shortHash(str, length = 15) {
+  return sha256(str).then(hash => hash.slice(0, length));
 }
-
