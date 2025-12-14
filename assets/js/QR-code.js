@@ -44,8 +44,6 @@ activateDiv.onclick = async () => {
          next_id_step = id_step + 1
          shortHash(id_story+"_"+next_id_step)
          .then(resultHash => {
-            console.log(decodedText)
-            console.log(resultHash)
             if(resultHash == decodedText) {
                cameraWrapper.classList.add("hidden");
                resultDiv.classList.remove("hidden");
@@ -58,7 +56,7 @@ activateDiv.onclick = async () => {
 
                data.listStory[id_story][id_step].completed = true;
 
-               if(id_step==3) { // Finished a story, you get more coins!
+               if(id_step==2) { // Finished a story, you get more coins!
                   data.coins += 10;
                   coinsDisplay.textContent = data.coins;
 
