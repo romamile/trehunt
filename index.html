@@ -50,8 +50,32 @@ permalink: /
     
 </div>
     
-<script src="/trehunt/assets/js/html5-qrcode.min.js"></script>
-<script src="/trehunt/assets/js/main.js"></script>
-<script src="/trehunt/assets/js/qrcode.js"></script>
+<script>
+    const INITIAL_COINS = 30;
+    
+    // Load or create at start
+    if (!localStorage.getItem("gameState")) {
+        const stories = Array.from({ length: 10 }, () =>
+          Array.from({ length: 3 }, () => ({
+             clue: 1,
+             completed: false
+          }))
+        );
+    
+        const state = {
+          coins: INITIAL_COINS,
+          listStory: stories
+        };
+    
+        localStorage.setItem("gameState", JSON.stringify(state));
+        console.log("First game")
+    }
+    
+    data = JSON.parse(localStorage.getItem("gameState"));
+    
+    // ==== Update displayed coins ====
+    const coinsDisplay = document.getElementById("coins");
+    coinsDisplay.textContent = data.coins;    
+</script>
 </body>
 </html>
