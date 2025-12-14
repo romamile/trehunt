@@ -34,10 +34,12 @@ permalink: /
 
   <!-- Menu -->
       <nav class="menu">
-          <ul>
+          <ul id="story-menu">
               {% for p in site.pages %}
-                  {% if p.title and p.url != page.url and p.id_step == 0 %}
-                  <li><a href="./{{ p.url }}">{{ p.title }}</a></li>
+                  {% if p.title and p.url != page.url %}
+                  <li class="menu-item hidden" data-story="{{ p.id_story }}" data-step="{{ p.id_step }}">
+                      <a href="./{{ p.url }}">{{ p.title }}</a>
+                  </li>
                   {% endif %}
               {% endfor %}
           </ul>
@@ -75,7 +77,26 @@ permalink: /
     
     // ==== Update displayed coins ====
     const coinsDisplay = document.getElementById("coins");
-    coinsDisplay.textContent = data.coins;    
+    coinsDisplay.textContent = data.coins;
+
+    // ==== Unhide the correct links
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+        const story = parseInt(item.dataset.story, 10);
+        const step  = parseInt(item.dataset.step, 10);
+
+        // Always show first step of each story
+        if (step === 0) {
+          item.classList.remove("hidden");
+          return;
+        }
+    
+        // Show completed steps
+        if( data.listStory.[story].[step].completed ) {
+          item.classList.remove("hidden");
+        }
+    });
 </script>
 </body>
 </html>
