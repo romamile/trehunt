@@ -82,6 +82,7 @@ permalink: /
     // ==== Unhide the correct links
     const menuItems = document.querySelectorAll(".menu-item");
 
+    let unhideNext = false;
     menuItems.forEach(item => {
         const story = parseInt(item.dataset.story, 10);
         const step  = parseInt(item.dataset.step, 10);
@@ -92,13 +93,25 @@ permalink: /
 
         // Always show first step of each story
         if (step === 0) {
+          unhideNext = false;
           item.classList.remove("hidden");
           return;
         }
+
+        if (step === 3) {
+          if(unhideNext)
+              item.classList.remove("hidden");
+          unhideNext = false;
+          return;
+        }
+
+        
     
         // Show completed steps
         if( data.listStory[story][step].completed ) {
           item.classList.remove("hidden");
+          if( step == 2 )
+            unhideNext = true;
         }
     });
 </script>
