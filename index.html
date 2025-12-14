@@ -86,6 +86,10 @@ permalink: /
         const story = parseInt(item.dataset.story, 10);
         const step  = parseInt(item.dataset.step, 10);
 
+        console.log(item.dataset)
+        console.log(story)
+        console.log(step)
+
         // Always show first step of each story
         if (step === 0) {
           item.classList.remove("hidden");
