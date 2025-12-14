@@ -11,6 +11,14 @@ if( data.listStory[id_story][id_step].completed ) {
 
    resultDiv.classList.remove("hidden");
    resultDiv.textContent = "You found me already!\nClick on me to go to the next page";
+   next_id_step = id_step + 1
+   shortHash(id_story+"_"+next_id_step)
+   .then(resultHash => {
+      resultDiv.addEventListener("click", () => {
+         window.location.href = "https://romamile.com/trehunt/"+resultHash;
+      }, { once: true } );
+   })
+   
 }
 
 
