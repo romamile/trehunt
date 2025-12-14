@@ -3,8 +3,8 @@ layout: default
 hash: 581953f8bed117a
 permalink: /581953f8bed117a/
 id_story: 7
-id_step: 0
-title: "Helena 7 _ 0 - PhD student, sharing the room of the researcher"
+id_step: 2
+title: "Helena 7 _ 2 - PhD student, sharing the room of the researcher"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "Get the arrow"
