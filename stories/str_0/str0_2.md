@@ -4,7 +4,7 @@ hash: 60eb897f65e7fc6
 permalink: /60eb897f65e7fc6/
 id_story: 0
 id_step: 2
-title: Kenji Sato - PostDoc"
+title: "Kenji Sato - PostDoc"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "Find the most liminal space and have a seat"
