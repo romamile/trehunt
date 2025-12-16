@@ -4,7 +4,7 @@ hash: 581953f8bed117a
 permalink: /581953f8bed117a/
 id_story: 7
 id_step: 2
-title: "Helena 7 _ 2 - PhD student, sharing the room of the researcher"
+title: "Kaveh Masendarani - PostDoc"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "HAMSTERREN!!!"
@@ -13,4 +13,4 @@ clues:
   - "Next to room 241"
 ---
 
-Hello, my name is **Helena**, I share a room with **researcher**, and to be honest, it’s not going well. I can’t stand the click click of **researcher** pen, they keep on pressing on it, every second of the day. Life is unbearable, just yesterday…
+B.O.B.? He is harmless enough. He hangs around the MPI and I often see him wandering aimlessly around the forest here. I think he sometimes looks in the trashbins outside when we forgot to lock the gate. That much is true, but it’s always for food or other useful things. I often talk to him when I see him on my way home. He is actually very nice and wouldn’t hurt anyone, if only people would take the time to get to know him, I’m sure they would realise he is a very nice human being…
