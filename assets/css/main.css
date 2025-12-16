@@ -203,3 +203,31 @@
     transform: scale(0.95);
 }
 
+
+/*Menu in index*/
+.menu ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.menu {
+  counter-reset: story-counter;
+}
+
+.menu-item[data-step="0"] {
+  counter-increment: story-counter;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.menu-item[data-step="0"]::before {
+  content: counter(story-counter) ". ";
+  font-weight: 600;
+}
+
+.menu-item[data-step]:not([data-step="0"]) {
+  padding-left: 1.5em;
+  font-size: 0.95em;
+}
+
