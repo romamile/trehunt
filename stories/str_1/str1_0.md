@@ -4,7 +4,7 @@ hash: 91ce60c07767c8c
 permalink: /91ce60c07767c8c/
 id_story: 1
 id_step: 0
-title: "Helena 1 _ 0 - PhD student, sharing the room of the researcher"
+title: "Eva Ivanov - Receptionist"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "I think I forgot something in my blue hoodie pocket, now where have I left it?"
@@ -13,4 +13,4 @@ clues:
   - "Room 162"
 ---
 
-Hello, my name is **Helena**, I share a room with **researcher**, and to be honest, it’s not going well. I can’t stand the click click of **researcher** pen, they keep on pressing on it, every second of the day. Life is unbearable, just yesterday…
+I am Eva Ivanov and I’m the receptionist here, so I know just about everyone. Many people walk by and have a little chat with me, I think it takes the edge off when they are stressed about a deadline or something like that. That’s How Morgan and I met each other actually, they ‘happened’ to walk by about five times each day. We started dating about 2 months ago but lately they have been very short with me. I’m not sure why but it is very frustrating.
