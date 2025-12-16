@@ -7,7 +7,7 @@ id_step: 2
 title: "Helena 2 _ 2 - PhD student, sharing the room of the researcher"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
-  - "Look down into the children testing wing from the second floor"
+  - "Looking down on the kids"
   - "It’s good that the safety railing are there"
   - "You can only see it from this vantage point"
   - "Look down into the children testing wing from the second floor"
