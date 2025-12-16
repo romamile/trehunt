@@ -3,6 +3,7 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 16px;
+    padding-top: 64px;
     font-family: sans-serif;
     background-color: #ffffff;
     text-align: justify;
@@ -14,6 +15,7 @@
     font-weight: bold;
     margin-bottom: 12px;
     text-align: center;
+    margin-top: 0;
 }
 
 /* Image */
@@ -86,6 +88,13 @@
     border-radius: 6px;
     font-weight: bold;
     border: 1px solid #ccc;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    z-index: 1000;
+
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 
