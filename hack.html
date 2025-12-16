@@ -1,0 +1,90 @@
+---
+title: MPI's treasure hunt Hacked page, all the content for freeeeee!
+layout: null
+permalink: /
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MPI's treasure hunt Hacked page, all the content for freeeeee!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/trehunt/assets/css/main.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Coin counter -->
+    <div id="coin-counter">Coins: <span id="coins">0</span></div>
+    
+    <!-- Title -->
+    <h1 class="title">MPI's treasure hunt Hacked page, all the content for freeeeee!</h1>
+
+    <!-- Picture -->
+    <div class="image-block">
+        <img src="/trehunt/assets/img/main.jpg" alt="welcome">
+    </div>
+
+      <!-- Markdown content -->
+    <div class="content">
+        <p>A murder happened at the MPI yesterday! Morgan Palfeneid has been found dead, in the VR lab, with a headset on their head. Mind you, this was not the reason for their death. They have been hit with a blunt object, probably a water bottle, enough to have blood all around. 10 people are suspects as they were thought to be in the office at that time, bellow are their testimonies. You can find here a link to all the story presents, with all your clues saved!</p>
+    </div>
+
+  <!-- Menu -->
+      <nav class="menu">
+          <ul id="story-menu">
+              {% for p in site.pages %}
+                  {% if p.title and p.url != page.url %}
+                  <li class="menu-item hidden" data-story="{{ p.id_story }}" data-step="{{ p.id_step }}">
+                      <a href="./{{ p.url }}">{{ p.title }}</a>
+                  </li>
+                  {% endif %}
+              {% endfor %}
+          </ul>
+      </nav>
+    
+    <p>If you have any trouble, be sure to contact the organisers!</p>
+
+   </div>
+
+    
+</div>
+    
+<script>
+    const INITIAL_COINS = 25;
+    
+    // Load or create at start
+    if (!localStorage.getItem("gameState")) {
+        const stories = Array.from({ length: 10 }, () =>
+          Array.from({ length: 3 }, () => ({
+             clue: 1,
+             completed: false
+          }))
+        );
+    
+        const state = {
+          coins: INITIAL_COINS,
+          listStory: stories
+        };
+    
+        localStorage.setItem("gameState", JSON.stringify(state));
+        console.log("First game")
+    }
+    
+    data = JSON.parse(localStorage.getItem("gameState"));
+    
+    // ==== Update displayed coins ====
+    const coinsDisplay = document.getElementById("coins");
+    coinsDisplay.textContent = data.coins;
+
+    // ==== Unhide all the  links
+    const menuItems = document.querySelectorAll(".menu-item");
+    let unhideNext = false;
+    menuItems.forEach(item => {
+          item.classList.remove("hidden");
+    });
+</script>
+</body>
+</html>
