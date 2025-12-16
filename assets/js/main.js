@@ -87,7 +87,7 @@ function updateButtonLabel() {
    if (data.listStory[id_story][id_step].clue >= 4) {
       revealBtn.disabled = true;
       revealBtn.textContent = "All clues revealed";
-      revealBtn.background = "#b4b2ae";   // any CSS color
+      revealBtn.disabled = true;
 
    } else {
       revealBtn.textContent = `Reveal next clue — cost ${COSTS[data.listStory[id_story][id_step].clue]} coins`;
