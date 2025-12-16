@@ -4,7 +4,7 @@ hash: b5c9206ec0bd2f0
 permalink: /b5c9206ec0bd2f0/
 id_story: 4
 id_step: 0
-title: "Helena 4 _ 0 - PhD student, sharing the room of the researcher"
+title: "Julian Torres - Postdoc in Leiden"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "9 + 1 old faces"
@@ -13,4 +13,4 @@ clues:
   - "The busts near 163, check under their hats"
 ---
 
-Hello, my name is **Helena**, I share a room with **researcher**, and to be honest, it’s not going well. I can’t stand the click click of **researcher** pen, they keep on pressing on it, every second of the day. Life is unbearable, just yesterday…
+Hello, my name is Julian Torres and I am a Postdoc at the Leiden University Centre for Linguistics. Morgan is an esteemed colleague of mine and I had the utmost respect for them. We were in a friendly rivalry since our research topics were quite similar, and I always enjoyed discussing the field with them. The last time I spoke to them they said they were on the verge of a breakthrough. I guess that won’t happen now, though I dearly hope information on this breakthrough is not lost.
