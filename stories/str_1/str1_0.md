@@ -7,7 +7,7 @@ id_step: 0
 title: "Eva Ivanov - Receptionist"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
-  - "I think I forgot something in my blue hoodie pocket, now where have I left it?"
+  - "I think I forgot something in my red jacket pocket, now where have I left it?"
   - "I left it just before entering the conference room"
   - "I left in the wardrobe"
   - "Room 162"
