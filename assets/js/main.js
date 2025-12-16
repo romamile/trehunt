@@ -70,6 +70,8 @@ updateButtonLabel();
 revealBtn.addEventListener("click", () => {
    if (data.listStory[id_story][id_step].clue >= clues.length) return;
 
+   data = JSON.parse(localStorage.getItem("gameState"));
+   
    // Pay cost and reveal clue
    data.coins -= COSTS[data.listStory[id_story][id_step].clue];
    coinsDisplay.textContent = data.coins;
