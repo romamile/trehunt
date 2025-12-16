@@ -4,7 +4,7 @@ hash: 87194e113406061
 permalink: /87194e113406061/
 id_story: 0
 id_step: 0
-title: "Helena 0 _ 0 - PhD student, sharing the room of the researcher"
+title: "Kenji Sato - PostDoc"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "When I arrived at the Institute, I was sent here"
@@ -13,7 +13,7 @@ clues:
   - "Room 150"
 ---
 
-Hello, my name is **Helena**, I share a room with **researcher**, and to be honest, it’s not going well. I can’t stand the click click of **researcher** pen, they keep on pressing on it, every second of the day. Life is unbearable, just yesterday… Hello, my name is **Helena**, I share a room with **researcher**, and to be honest, it’s not going well. I can’t stand the click click of **researcher** pen, they keep on pressing on it, every second of the day. Life is unbearable, just yesterday… Hello, my name is **Helena**, I share a room with **researcher**, and to be honest, it’s not 
+My name is Kenji and I’ve worked together with Morgan on analysing their data. I think their ideas are good but they need to start living in the modern world. I’ve tried to get them to use more modern analysis tools but they simply refuse. It is quite frustrating, and we’ve had many heated discussions about it. It’s all in the name of science of course, to make the research the best it can be. I don’t hold it against them personally though.
 
 
 
