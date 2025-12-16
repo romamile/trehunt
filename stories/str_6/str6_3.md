@@ -4,7 +4,7 @@ hash: 6389623d7164224
 permalink: /6389623d7164224/
 id_story: 6
 id_step: 3
-title: "Helena 6 _ 3 - PhD student, sharing the room of the researcher"
+title: "Elke Müller - PhD student"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "-"
@@ -13,4 +13,4 @@ clues:
   - "-"
 ---
 
-Hello, my name is **Helena**, I share a room with **researcher**, and to be honest, it’s not going well. I can’t stand the click click of **researcher** pen, they keep on pressing on it, every second of the day. Life is unbearable, just yesterday…
+Willem Overbeek? Oh he is such a nice man. There is no way he is the killer. No not because he is so nice. Because there is no way for him to get into the MPI after hours. He is just a participant. A participant that practically worked here himself but a participant nonetheless. He can only get inside when someone lets him in, and after 17:00 hours there is no one to do that, so he cannot be the killer.
