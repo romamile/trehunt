@@ -4,7 +4,7 @@ hash: 8b77972fd732048
 permalink: /8b77972fd732048/
 id_story: 2
 id_step: 0
-title: "Helena 2 _ 0 - PhD student, sharing the room of the researcher"
+title: "Willem Overbeek - Participant"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "Underneath Santa’s butt"
@@ -13,4 +13,4 @@ clues:
   - "At the Reception"
 ---
 
-Hello, my name is **Helena**, I share a room with **researcher**, and to be honest, it’s not going well. I can’t stand the click click of **researcher** pen, they keep on pressing on it, every second of the day. Life is unbearable, just yesterday…
+Hi, my name is Willem Overbeek. I don’t work here at the MPI, I just participate in a lot of research. It’s good money and very fun to do. I learn a lot about language research in the process too, which is amazing because I am fascinated by language. I have also participated quite a few times in research from Morgan. However, last week I was told I am forbidden from doing any more research at the MPI, so I have been forced to do other things.
