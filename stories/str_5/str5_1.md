@@ -4,7 +4,7 @@ hash: e2af2ac479786b8
 permalink: /e2af2ac479786b8/
 id_story: 5
 id_step: 1
-title: "Helena 5 _ 1 - PhD student, sharing the room of the researcher"
+title: "Jean-Pierre Dupont - PhD"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "I want to make myself a coffee, but a good one, with beans"
@@ -13,4 +13,4 @@ clues:
   - "Kitchenette on the 3rd floor, in front of the main stairs"
 ---
 
-Hello, my name is **Helena**, I share a room with **researcher**, and to be honest, it’s not going well. I can’t stand the click click of **researcher** pen, they keep on pressing on it, every second of the day. Life is unbearable, just yesterday…
+If Morgan had any enemies? I’m not sure about real enemies, but I do know that they and Julian were on bad terms with each other. They often had arguments about their research and Julian had the tendency to become very angry and emotional. I’ve worked with him before during my master’s in Leiden, and there was a story going around that he hit one of his students once for arguing against his research methods. I’m not sure if it’s true, but no one gets such a reputation while being innocent right?
