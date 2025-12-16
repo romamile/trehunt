@@ -1,6 +1,6 @@
 // LOCAL STORAGE HANDLING ==============
-const INITIAL_COINS = 30;
-const COSTS = [0, 2, 4, 6];
+const INITIAL_COINS = 25;
+const COSTS = [0, 1, 2, 3];
 
 // Load or create at start
 if (!localStorage.getItem("gameState")) {
