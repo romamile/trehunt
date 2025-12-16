@@ -231,3 +231,19 @@
   font-size: 0.95em;
 }
 
+
+#reveal-button:disabled {
+  background-color: #b4b2ae;
+  color: #666;
+  cursor: default;
+  opacity: 1;
+}
+
+/* Kill hover effects when disabled */
+#reveal-button:disabled:hover {
+  background-color: #b4b2ae;
+  transform: none;
+  box-shadow: none;
+}
+
+
