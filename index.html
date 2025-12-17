@@ -84,8 +84,11 @@ permalink: /
 
     let unhideNext = false;
     menuItems.forEach(item => {
-        const story = parseInt(item.dataset.story, 10);
-        const step  = parseInt(item.dataset.step, 10);
+        story = 999
+        step = 999
+        
+        story = parseInt(item.dataset.story, 10);
+        step  = parseInt(item.dataset.step, 10);
 
         console.log(item.dataset)
         console.log(story)
@@ -108,7 +111,7 @@ permalink: /
         
     
         // Show completed steps
-        if( data.listStory[story][step].completed ) {
+        if( data.listStory?.[story]?.[step]?.completed ) {
           item.classList.remove("hidden");
           if( step == 2 )
             unhideNext = true;
