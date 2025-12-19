@@ -30,6 +30,7 @@
     
     {% assign steps = site.pages
        | where: "id_story", page.id_story
+       | where_exp: "p", "p.id_step != nil"
        | sort: "id_step" %}
     
     {% for step in steps %}
