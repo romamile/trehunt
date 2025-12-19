@@ -36,10 +36,20 @@ permalink: /full
       <nav class="menu">
           <ul id="story-menu">
               {% for p in site.pages %}
-                  {% if p.title and p.url != page.url %}
-                  <li class="menu-item hidden" data-story="{{ p.id_story }}" data-step="{{ p.id_step }}">
-                      <a href="./{{ p.url }}">{{ p.title }}</a>
-                  </li>
+                  {% if p.id_story != nil %}
+                      {% if p.id_step == nil %}
+                          <li class="menu-item hidden" data-story="{{ p.id_story }}" data-step="{{ p.id_step }}">
+                              <a href="./{{ p.url }}">Whole Story</a>
+                          </li>
+                      {% elsif p.id_step == 0 %}
+                          <li class="menu-item hidden" data-story="{{ p.id_story }}" data-step="{{ p.id_step }}">
+                              <a href="./{{ p.url }}">{{ p.title }}</a>
+                          </li>
+                      {% else %}
+                          <li class="menu-item hidden" data-story="{{ p.id_story }}" data-step="{{ p.id_step }}">
+                              <a href="./{{ p.url }}">{{ p.title }} {{ p.id_step + 1}}</a>
+                          </li>    
+                      {% endif %}
                   {% endif %}
               {% endfor %}
           </ul>
