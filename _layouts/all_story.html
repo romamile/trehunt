@@ -34,29 +34,15 @@
     
     {% for step in steps %}
       <section class="step">
-        <h2>{{ step.title }}</h2>
+        <!-- <h2>{{ step.title }}</h2>  -->
+        <!-- Picture -->
+        <div class="image-block-whole-story">
+            <img src="/trehunt/assets/img/str{{ step.id_story }}_{{ step.id_step }}.jpg" alt="{{ step.title }}">    
+        </div>
         <div class="content">
           {{ step.content }}
         </div>
       </section>
-    {% endfor %}
-    
-        
-    {% assign steps = site.pages
-      | where: "id_story", page.id_story
-      | sort: "id_step" %}
-    
-    {% for step in steps %}
-      {% unless step.path == page.path %}
-        <section class="step">
-          <h2>{{ step.title }}</h2>
-            <!-- Picture -->
-            <div class="image-block">
-                <img src="/trehunt/assets/img/str{{ step.id_story }}_{{ step.id_step }}.jpg" alt="{{ step.title }}">    
-            </div>
-            {{ step.content }}
-        </section>
-      {% endunless %}
     {% endfor %}
     
 </div>
