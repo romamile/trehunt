@@ -28,9 +28,9 @@
     <!-- Title -->
     <h1 class="title">{{ page.title }}</h1>
     
-    {% assign steps = site.steps
-       | where: "story", page.id_story
-       | sort: "step" %}
+    {% assign steps = site.page
+       | where: "id_story", page.id_story
+       | sort: "id_step" %}
     
     {% for step in steps %}
       <section class="step">
