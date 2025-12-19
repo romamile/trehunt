@@ -43,11 +43,11 @@ permalink: /full
                           </li>
                       {% elsif p.id_step == 0 %}
                           <li class="menu-item hidden" data-story="{{ p.id_story }}" data-step="{{ p.id_step }}">
-                              <a href="./{{ p.url }}">{{ p.title }}</a>
+                              <a href="./{{ p.url }}">{{ p.title }} {{ p.id_step  | plus: 1}}</a>
                           </li>
                       {% else %}
                           <li class="menu-item hidden" data-story="{{ p.id_story }}" data-step="{{ p.id_step }}">
-                              <a href="./{{ p.url }}">{{ p.title }} {{ p.id_step + 1}}</a>
+                              <a href="./{{ p.url }}">{{ p.title }} {{ p.id_step  | plus: 1}}</a>
                           </li>    
                       {% endif %}
                   {% endif %}
