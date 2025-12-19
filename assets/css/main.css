@@ -253,3 +253,18 @@
 }
 
 
+
+.image-block-whole-story {
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+}
+
+.image-block-whole-story img {
+    width: 100%;
+    max-height: 200px;         
+    object-fit: cover;         
+    border-radius: 8px;
+}
+
+
