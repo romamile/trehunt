@@ -13,4 +13,4 @@ clues:
   - "At the end of the kids testing area on the orange wall near room A104"
 ---
 
-Hello, I am Elke Müller and I am a PhD student here at the MPI. I love it here and Morgan has been such a good mentor to me. We have even become friends. And now. Now she is gone… It’s true that we had some strife in the beginning. We were both looking for housing and we were often bidding against each other, but that is all water under the bridge now.
+Hello, I am Elke Müller and I am a PhD student here at the MPI. I love it here and Morgan has been such a good mentor to me. We have even become friends. And now. Now they are gone… It’s true that we had some strife in the beginning. We were both looking for housing and we were often bidding against each other, but that is all water under the bridge now.
