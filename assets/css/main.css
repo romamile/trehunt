@@ -288,3 +288,38 @@
     color: #555;
     font-weight: 500;
 }
+
+
+
+/*drop down menu culprit*/
+#culprit-guess {
+  margin-top: 2rem;
+}
+
+#suspect-select {
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+}
+
+#guess-result {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  background: #e6f6ea;
+  color: #1e7f43;
+}
+
+.error {
+  background: #fdeaea;
+  color: #a12828;
+}
+
+
+
