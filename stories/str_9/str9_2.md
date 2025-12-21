@@ -9,7 +9,7 @@ picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
   - "In this corridor I can see what rooms are occupied from the outside"
   - "I'm running an experiment but you can come in"
-  - "They are also doing brain measurements here"
+  - "They are doing a lot of measuremente here"
   - "Room 212"
 ---
 
