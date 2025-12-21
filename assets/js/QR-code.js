@@ -5,7 +5,7 @@ const resultDiv = document.getElementById("result");
 
 const html5Qr = new Html5Qrcode("my-camera");
 
-if( data.listStory[id_story][id_step].completed || PAGE_DATA.?full) {
+if( data.listStory[id_story][id_step].completed || PAGE_DATA?.full) {
    cameraWrapper.classList.add("hidden");
    activateDiv.classList.add("hidden");
 
