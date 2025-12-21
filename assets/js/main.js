@@ -56,7 +56,7 @@ if(id_step == 3) {
 
 // ==== Reveal saved clues ====
 clues.forEach((clue, index) => {
-   if (index < data.listStory[id_story][id_step].clue) {
+   if (index < data.listStory[id_story][id_step].clue || PAGE_DATA?.full) {
       clue.classList.remove("hidden");
    }
 });
