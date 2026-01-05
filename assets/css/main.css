@@ -343,27 +343,27 @@
   border: 1px solid #ccc;
 }
 
-a.whole {
+a.step {
   color: #00786A;
 }
 
-a.whole:hover {
+a.step:hover {
   color: #80BBB4;
 }
 
-a.whole:visited {
+a.step:visited {
   color: #00483F;
 }
 
 
-a.step {
+a.whole {
   color: #ED6B06;
 }
 
-a.step:hover {
+a.whole:hover {
   color: #F7B682;
 }
 
-a.step:visited {
+a.whole:visited {
   color: #8E4114;
 }
