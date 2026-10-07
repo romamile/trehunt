@@ -7,8 +7,8 @@ id_step: 1
 title: "Willem Overbeek - Participant"
 picture: "/trehunt/assets/img/str1_1.jpg"
 clues:
-  - "In the poster corridor"
-  - "By the pine tree"
+  - "In a poster corridor"
+  - "A printer AND a screen? In a corner corridor? but but... why?"
   - "Language is very modular here ;) ;)"
   - "Near room 308"
 ---
